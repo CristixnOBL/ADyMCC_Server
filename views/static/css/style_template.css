@@ -1,0 +1,51 @@
+.navbar-menu{
+    height: 4rem;
+    z-index: 10000;
+}
+
+.sidebar-nav{
+    width: 15rem;
+    position: fixed;
+    top: 4rem;
+}
+
+.link_active, .nav-link:hover {
+    background-color: deepskyblue;
+}
+
+.content{
+    min-height: calc(100vh - 4rem);
+}
+
+.title-menu{
+    display: none;
+}
+
+.shadowd{
+    box-shadow: 0px 0px 10px 3px gray;
+}
+
+
+@media (min-width: 800px) {
+    .sidebar-nav{
+        transform: none;
+        visibility: visible !important;
+        top: 0;
+    }
+
+    .content{
+        margin-left: 15rem;
+    }
+
+    .navbar-menu{
+        display: none;
+    }
+
+    .title-menu{
+        display: inline;
+    }
+
+    .content{
+        min-height: 100vh;
+    }
+}

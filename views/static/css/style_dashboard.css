@@ -1,0 +1,17 @@
+.img_stream{
+    width: 100%;
+}
+
+.buttons_control {
+    color: yellow;
+}
+
+@media (min-width: 800px) {
+    .img_stream{
+        max-width: 70%;
+    }
+
+    .div_screen{
+        width: 100%;
+    }
+}

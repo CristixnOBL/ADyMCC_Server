@@ -1,0 +1,58 @@
+{% extends "template.html" %}
+
+{% block head %}
+    <title>Dashboard</title>
+{% endblock %}
+
+{% block body %}
+    <div class="">
+        <div class="row">
+            <div class="col bg-danger rounded-3 text-white m-2 p-2">
+                <span>Date</span>
+                <hr class="dropdown-divider" style="height: 0.2rem;">
+            </div>
+            <div class="col bg-primary rounded-3 text-white m-2 p-2">
+                <span>Memory</span>
+                <hr class="dropdown-divider" style="height: 0.2rem;">
+            </div>
+            <div class="col bg-success rounded-3 text-white m-2 p-2">
+                <span>Temperature</span>
+                <hr class="dropdown-divider" style="height: 0.2rem;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col bg-dark rounded-3 m-2">
+                <img src="{{ url_for('static', filename='images/852494.jpg')}}" alt="" srcset="" style="min-width: 50%;">
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <img src="{{ url_for('static', filename='images/852494.jpg')}}" alt="" srcset="" style="width: auto;">
+    <button id="btn_screen_img">Descargar</button>
+    <button id="btn_record_stop">Record</button>
+    -->
+{% endblock %}
+
+{% block js %}
+    <script>
+        const $btn_screen_img = document.querySelector("#btn_screen_img");
+        const $btn_record_vid = document.querySelector("#btn_record_stop");
+
+        $btn_screen_img.onclick = async () => {
+            const request_server = await fetch("./screen_img");
+            const response_server = await request_server.json();
+        };
+
+
+        $btn_record_vid.onclick = async () => {
+            const request_server = await fetch("./record");
+            const response_server = await request_server.json();
+            if (response_server){
+                $btn_record_vid.innerHTML = "Stop"
+            } else {
+                $btn_record_vid.innerHTML = "Record"
+            }
+        };
+    </script>
+{% endblock %}
