@@ -2,8 +2,14 @@
     width: 100%;
 }
 
-.buttons_control {
-    color: yellow;
+.bg-status {
+    background: rgb(0,81,209);
+    background: linear-gradient(135deg, rgba(0,81,209,1) 0%, rgba(0,143,209,1) 50%, rgba(66,179,231,1) 100%);
+}
+
+.btn-dash{
+    background-color: #008fd1;
+    border: none;
 }
 
 @media (min-width: 800px) {

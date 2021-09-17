@@ -1,3 +1,7 @@
+body {
+    background-color: #262d34;
+}
+
 .navbar-menu{
     height: 4rem;
     z-index: 10000;
@@ -10,7 +14,7 @@
 }
 
 .link_active, .nav-link:hover {
-    background-color: deepskyblue;
+    background-color: #008fd1;
 }
 
 .content{
@@ -21,8 +25,8 @@
     display: none;
 }
 
-.shadowd{
-    box-shadow: 0px 0px 10px 3px gray;
+.bg-menu {
+    background-color: #2c3643;
 }
 
 
